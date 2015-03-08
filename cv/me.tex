@@ -1,0 +1,173 @@
+\documentclass[9pt]{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[usenames]{color}
+\renewcommand{\familydefault}{\sfdefault}
+\leftmargin=0.25in
+\oddsidemargin=0.25in
+\textwidth=6.0in
+\topmargin=-0.25in
+\textheight=9.25in
+
+\raggedright
+
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+% DEFINITIONS FOR RESUME
+
+\newenvironment{changemargin}[2]{%
+  \begin{list}{}{%
+    \setlength{\topsep}{0pt}%
+    \setlength{\leftmargin}{#1}%
+    \setlength{\rightmargin}{#2}%
+    \setlength{\listparindent}{\parindent}%
+    \setlength{\itemindent}{\parindent}%
+    \setlength{\parsep}{\parskip}%
+  }%
+  \item[]}{\end{list}
+}
+
+\newcommand{\lineover}{
+	\begin{changemargin}{-0.05in}{-0.05in}
+		\vspace*{-8pt}
+		\hrulefill \\
+		\vspace*{-2pt}
+	\end{changemargin}
+}
+
+\newcommand{\header}[1]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\scshape{#1}\\
+  	\lineover
+	\end{changemargin}
+}
+
+\newcommand{\contact}[4]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\begin{center}
+			{\Large \scshape {#1}}\\ \smallskip
+			{#2}\\ \smallskip
+			{#3}\\ \smallskip
+			{#4}\smallskip
+		\end{center}
+	\end{changemargin}
+}
+
+\newenvironment{body} {
+	\vspace*{-16pt}
+	\begin{changemargin}{-0.25in}{-0.5in}
+  }
+	{\end{changemargin}
+}
+
+\newcommand{\school}[4]{
+	\textbf{#1} \hfill \emph{#2\\}
+	#3\\
+	#4\\
+}
+
+% END RESUME DEFINITIONS
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Name
+\contact{Christopher Mac Murray}{3394 3rd Street, Oceanside NY}{chris.macmurray@gmail.com}{(347)249-8718}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Skills
+\header{Infrastructure as Code}
+
+\begin{body}
+	\vspace{14pt}
+	\emph{\textbf{AWS:}}{} EC2, Cloud Formation, OpsWOrks, RDS, Elastic Cache, VPC, Network Security and Design\\
+	\smallskip
+	\emph{\textbf{Operating Systems:}}{} Redhat Derivitives, Debian Derivitives, Solaris, BSD Derivitives\\
+	\smallskip
+	\emph{\textbf{Services:}}{} Apache, Nginx, MySQL, MongoDB, MySQL, Eucalyptus\\
+	\smallskip
+	\emph{\textbf{Scripting:}}{} Bash, Python, Ruby\\
+	\smallskip
+	\emph{\textbf{Config Management:}}{} Chef, Puppet, Bcfg2, Fabric \\
+\end{body}
+
+\smallskip
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Experience
+\header{Career History}
+
+\begin{body}
+	\vspace{14pt}
+
+
+	\textbf{DevOps Manager}, \emph{Offerpop} \hfill \emph{Febuary 2014 - Present}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt  % reduce space between items
+		\item Autored Cloud Formation templates for stack deployment
+		\item Migrated Legacy platform to AWS VPC
+		\item Deployed OpsWorks configuration management platform
+		\item Provided in house security auditing and penetration testing
+	\end{itemize}
+
+	\textbf{Systems Engineer}, \emph{Maker Studios} \hfill \emph{June 2013 - Febuary 2014}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt  % reduce space between items
+		\item Created KVM/Xen API based boot strapping solution for virtual systems
+		\item Consolidated data centers
+		\item Virtualized internal dns an other resources
+		\item Created Cloud Formation templating for client applications
+	\end{itemize}
+
+	\textbf{Systems Engineer}, \emph{Wireless Generation} \hfill \emph{January 2012 - June 2013}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt  % reduce space between items
+		\item Implemented secure auth token caching system using SASL and Memcached
+		\item Deployed Eucalyptus private cloud for Selenium grid tests
+		\item Maintained MongoDB installations across organization
+    \item Drove company hackathon initiative
+	\end{itemize}
+
+	\textbf {Director of Infrastructure}, \emph{XL Marketing} \hfill \emph{November 2010 - January 2012}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt % reduce space between items
+		\item Rearchitected MySQL clustering
+		\item Designed Xen and KVM based virtualization solutions
+		\item Expanded data center operations
+		\item Created multi-homed BGP network topology to qualify as ISP
+	\end{itemize}
+
+	\textbf {Senior Systems Administrator}, \emph{Mediawhiz Holdings LLC.} \hfill \emph{July 2008 - November 2010}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt % reduce space between items
+		\item Deployed Nagios monitoring solution
+		\item Performed datacenter migration
+		\item Designed database backup solution
+		\item Deployed mass email marketing solution
+	\end{itemize}
+
+\textbf {Senior Systems Administrator}, \emph{Transaction Auditing Group.} \hfill \emph{November 2006 - July 2008}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt % reduce space between items
+		\item Migrated market data capture software from win2k3 to RHEL
+		\item Deployed monitoring solution
+		\item Managed company network and SAN
+		\item Migrated data center
+	\end{itemize}
+\end{body}
+
+\smallskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Education
+\header{Education}
+
+\begin{body}
+	\vspace{14pt}
+	\textbf{B.A. English Literature/Studio Art}{} \hfill \emph{May 2001}{} \\
+	\emph{The University of Vermont}, Burlington, VT{} \\
+\end{body}
+\end{document}
